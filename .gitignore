@@ -1,11 +1,14 @@
 # Exclude ASM Binaries
+*
 /*
+*/*
+
 # Except source code files
 !.gitignore
+!*.readme
 !*.c
 !*.asm
 !*.sh
-!*.gitignore
 !*.md
 !*.txt
 

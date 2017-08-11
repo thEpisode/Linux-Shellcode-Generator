@@ -8,7 +8,7 @@ All source codes run on Linux, I will try to test in some many distros
 
 Execute bash script in /Bin2Shellcode folder and pass the binary name
 
-> bash bin2shell.sh binaryName
+> bash shellcode.sh ~/ASM/FolderName/binaryName
 
 ## x86 support
 
