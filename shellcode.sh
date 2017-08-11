@@ -22,13 +22,18 @@ function injectShellcode {
     code="char code[] =\"$shellcode_escaped\";"
 
     sed -i "${shellcodeTestLine}s/.*/$code/" "$shellcodeTestFile"
+
+    echo "Shellcode injected into "$currentFolder"/ShellcodeTest/shellcode.c"
 }
 
 function buildShellcode {
     gcc -o $currentFolder"/ShellcodeTest/shellcode" $currentFolder"/ShellcodeTest/shellcode.c"
+
+    echo "Shellcode test program was build succesfuly into "$currentFolder"/ShellcodeTest/shellcode"
 }
 
 function runShellcode {
+    echo "Executing shellcode "$currentFolder"/ShellcodeTest/shellcode"
     ./ShellcodeTest/shellcode
 }
 
