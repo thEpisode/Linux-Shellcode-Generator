@@ -46,46 +46,48 @@ function printShellcode {
     echo
 }
 
+function printHelp {
+    echo
+    echo 'Usage: bash shellcode.sh [<filename>] [<options>]'
+    echo
+    echo '    -s, --save                Save shellcode into a .txt file'
+    echo '    -t, --test                Inject shellcode into shellcode.c file to test'
+    echo '    -tb, --testbuild          Inject shellcode and build shellcode.c file'
+    echo '    -tbr, --testbuildrun      Inject shellcode, buld and run shellcode.c file'
+    echo
+    echo 'Example:'
+    echo '  > bash shellcode.sh ~/ASM/HelloWorld/Helloworld.asm -tbr'
+}
+
 while true; do
     case "$saveInFile" in 
+        -h|--help)
+            printHelp
+            break
+        ;;
         # Save shellcode into a .txt file
-        -s|--save)
-            
+        -s|--save)            
             saveShellcode
-
-            printShellcode
-            
+            printShellcode            
             break
         ;;
         # Save shellcode into shellcode.c file to test
-        -t|--test)
-            
+        -t|--test)            
             injectShellcode
-
             printShellcode
-
             break
         ;;
-        -tb|--testbuild)
-            
+        -tb|--testbuild)            
             injectShellcode
-
             buildShellcode
-
             printShellcode
-
             break
         ;;
-        -tbr|--testbuildrun)
-            
+        -tbr|--testbuildrun)            
             injectShellcode
-
             buildShellcode
-
             runShellcode
-
             printShellcode
-
             break
         ;;
         *)
