@@ -12,8 +12,6 @@
 !*.md
 !*.txt
 
-!*/
-
 # Except source codes in subdirectories
 !*/*.c
 !/*/*.c
