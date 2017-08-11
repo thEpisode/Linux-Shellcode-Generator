@@ -22,11 +22,7 @@ while true; do
             shellcodeTestLine="1"
             code="char code[] =\"$shellcode\";"
             
-            replacement_escaped=$( echo "$cCode" | sed -e 's/[\/&]/\\&/g' )
-            
-            echo "code:"
-            echo $replacement_escaped
-            sed -i "${shellcodeTestLine}s/.*/$replacement_escaped/" "$shellcodeTestFile"
+            sed -i "${shellcodeTestLine}s/.*/$code/" "$shellcodeTestFile"
             break
         ;;
         *)
