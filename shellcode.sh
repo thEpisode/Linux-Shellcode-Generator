@@ -21,7 +21,7 @@ while true; do
             local file=$currentFolder"/ShellcodeTest/shellcode.c"
             local line_num="1"
             local replacement='char code[] = "$shellcode"';
-
+            echo replacement
             replacement_escaped=$( echo "$replacement" | sed -e 's/[\/&]/\\&/g' )
             sed -i "${line_num}s/.*/$replacement_escaped/" "$file"
         ;;
