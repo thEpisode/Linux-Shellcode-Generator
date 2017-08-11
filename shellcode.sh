@@ -29,8 +29,7 @@ function injectShellcode {
 }
 
 function buildShellcode {
-    gcc -fno-stack-protector -z execstack $currentFolder"/ShellcodeTest/shellcode.c" -o -o $currentFolder"/ShellcodeTest/shellcode"
-
+    gcc $currentFolder"/ShellcodeTest/shellcode.c" -o $currentFolder"/ShellcodeTest/shellcode" -fno-stack-protector -z execstack -no-pie
     echo "Shellcode test program was build succesfuly into "$currentFolder"/ShellcodeTest/shellcode"
 }
 
