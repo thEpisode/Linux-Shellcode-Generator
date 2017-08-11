@@ -20,7 +20,7 @@ while true; do
         -t|--test)
             shellcodeTestFile=$currentFolder"/ShellcodeTest/shellcode.c"
             shellcodeTestLine="1"
-            code="char code[] =\""$shellcode
+            code="char code[] =\"$shellcode\";"
 
             echo "code:"
             echo $code
