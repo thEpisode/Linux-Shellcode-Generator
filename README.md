@@ -20,6 +20,22 @@ All source codes run on Linux, I will try to test in some many distros
 
 > gcc -o cExecutableName sourceCode.c
 
+## Binary to Shellcode string
+
+### Show in console
+
+Execute bash script in /Bin2Shellcode folder and pass the binary name
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName
+
+### Save in txt file
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName --save
+
+or
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName -s
+
 ## ASM Fast Development Projects (X86)
 
 I create a new strategy to fast development in asm, you could use it but you need to follow next instructions:
@@ -41,9 +57,3 @@ If you have an ASM Fast Development Project to compile only needs run following 
 > bash CompileASM.sh --folder MyProject
 
 It generates .o file and executable file into the folder
-
-## Bin to Shellcode string
-
-Execute bash script in /Bin2Shellcode folder and pass the binary name
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName
