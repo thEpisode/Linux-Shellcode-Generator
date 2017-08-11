@@ -50,7 +50,9 @@ while true; do
             printShellcode
 
             break
+        ;;
         *)
+            printShellcode
             break
         ;;
     esac
@@ -86,5 +88,3 @@ function printShellcode {
     echo $shellcode
     echo
 }
-
-printShellcode
