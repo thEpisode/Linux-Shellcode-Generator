@@ -45,28 +45,37 @@ To fast development in shellcodes use next following script to generate shellcod
 
 ## ASM Fast Development Projects (X86)
 
-I create a new strategy to fast development in asm, you could use it but you need to follow next instructions:
+For fast development in asm, you could use next script and specification:
+
+### Usage
+
+    Usage: bash ASMFastDevelopment.sh [<options>] [<folder name>]
+    
+        -h, --help                Show helps'
+        -n, --new                 Create new project with folder name given
+        -c, --compile             Compile .asm file inside folder
+            Disclaimer: This script works in current folder, do not try to compile outside this folder
+    
+    Example:
+      > bash ASMFastDevelopment.sh -c HelloWorld
+    
 
 ### Creating new ASM Fast Development Projects
 
-To create new project in ASM create a new folder named as you want and create a .asm file with same folder name. E.g.
+> bash ASMFastDevelopment.sh -n HelloWorld
 
-    | ~/ASM/
-        |- MyProject/
-            |- MyProject.asm
+This command create a new .asm file inside folder, open and develop!
 
-Develop all you needs into .asm file
+**Disclaimer**: Do not change the .asm file name!. If you need change it, **you need to change folder name**
 
 ### Compiling ASM Fast Development Projects
 
-If you have an ASM Fast Development Project to compile only needs run following bash command
-
-> bash CompileASM.sh --folder MyProject
+> bash ASMFastDevelopment.sh -c HelloWorld
 
 It generates:
 
     | ~/ASM/
-        |- MyProject/
-            |- MyProject.asm
-            |- MyProject.o
-            |- MyProject [Executable file]
+        |- HelloWorld/
+            |- HelloWorld.asm
+            |- HelloWorld.o
+            |- HelloWorld [Executable file]

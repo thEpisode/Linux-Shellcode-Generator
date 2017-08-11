@@ -30,7 +30,7 @@ function compile {
 
 function printHelp {
     echo
-    echo 'Usage: bash CompileASM.sh [<options>] [<folder name>]'
+    echo 'Usage: bash ASMFastDevelopment.sh [<options>] [<folder name>]'
     echo
     echo '    -h, --help                Show helps'
     echo '    -n, --new                 Create new project with folder name given'
@@ -38,7 +38,7 @@ function printHelp {
     echo '        Disclaimer: This script works in current folder, do not try to compile outside this folder'
     echo
     echo 'Example:'
-    echo '  > bash CompileASM.sh -f HelloWorld'
+    echo '  > bash CompileASM.sh -c HelloWorld'
     echo
 }
 
