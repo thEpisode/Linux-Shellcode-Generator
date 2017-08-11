@@ -11,7 +11,8 @@ done
 
 function saveShellcode {
     rm -f shellcode.txt
-    echo $shellcode >> $binaryFile"_shellcode.txt"
+    echo $shellcode >> 
+    echo "Shellcode save into "$binaryFile"_shellcode.txt"
 }
 
 function injectShellcode {
