@@ -13,6 +13,7 @@ while test $# -gt 0; do
     case saveInFile in 
         -s|--save)
             echo -n $shellcode >> shellcode.txt
+    esac
 done
 
 # Print in console
