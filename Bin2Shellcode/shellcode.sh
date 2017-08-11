@@ -3,24 +3,17 @@
 binaryFile=$1
 saveInFile=$2
 
-echo $binaryFile
-echo $saveInFile
-
-for i in $(objdump -d $binaryFile |grep "^ " |cut -f2); do echo -n '\x'$i; done;
-
 # Get data from binary
 for i in $(objdump -d $binaryFile |grep "^ " |cut -f2);do
     shellcode=$shellcode'\x'$i
 done
 
-echo 'Shellcode:'
-echo $shellcode
-
+# Read if exist -s or --save parameter and save result into file
 while true; do
     case "$saveInFile" in 
         -s|--save)
-            echo 'inside while and case'
-            echo -n $shellcode >> shellcode.txt
+            rm -f shellcode.txt
+            echo $shellcode >> shellcode.txt
             break
         ;;
         *)
@@ -30,4 +23,7 @@ while true; do
 done
 
 # Print in console
+echo
+echo 'Shellcode: '
+echo
 echo $shellcode
