@@ -2,6 +2,7 @@
 
 binaryFile=$1
 saveInFile=$2
+currentFolder=${PWD}
 
 # Get data from binary
 for i in $(objdump -d $binaryFile |grep "^ " |cut -f2);do
@@ -13,8 +14,16 @@ while true; do
     case "$saveInFile" in 
         -s|--save)
             rm -f shellcode.txt
-            echo $shellcode >> shellcode.txt
+            echo $shellcode >> $binaryFile"_shellcode.txt"
             break
+        ;;
+        -t|--test)
+            local file=$currentFolder"/ShellcodeTest/shellcode.c"
+            local line_num="1"
+            local replacement='char code[] = "$shellcode"';
+
+            replacement_escaped=$( echo "$replacement" | sed -e 's/[\/&]/\\&/g' )
+            sed -i "${line_num}s/.*/$replacement_escaped/" "$file"
         ;;
         *)
             break
