@@ -8,8 +8,8 @@ while true; do
     case "$projectFlag" in 
         -f|--folder)
             cd "$currentFolder/$projectFolder/"
-            nasm -f elf $projectFolder'.asm'
-            ld -o $projectFolder $projectFolder'.o'
+            nasm -f elf32 $projectFolder'.asm' -o $projectFolder'.o'
+            ld -m elf_i386 $projectFolder'.o' -o $projectFolder
             cd $currentFolder
             break
         ;;
