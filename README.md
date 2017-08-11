@@ -24,57 +24,24 @@ Normal purposes
 
 Testing shellcodes
 
-> gcc -fno-stack-protector -z execstack cExecutableName.c -o cExecutableName
+> gcc cExecutableName.c -o cExecutableName -fno-stack-protector -z execstack -no-pie
 
 ## Binary to Shellcode string
 
-To fast development in shellcodes use next following script to generate shellcode string
+To fast development in shellcodes use next following script to generate shellcode string and test
 
 ### Usage
 
-> bash shellcode.sh [filename] [-s --save | optional]
-
-### Show in console
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName
-
-### Save in txt file
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName --save
-
-or
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName -s
-
-### Testing in C program
-
-If you want to run in a C program but not want to compile, using next flag you can replace in ShellcodeTest/shellcode.c the payload
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName --test
-
-or 
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName -t
-
-### Testing and compiling in C program
-
-Similar to last option but this compile the program
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName --testbuild
-
-or 
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName -tb
-
-### Testing, compiling and run in C program
-
-Similar to last option but this execute the program
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName --testbuildrun
-
-or 
-
-> bash shellcode.sh ~/ASM/FolderName/binaryName -tbr
+    Usage: bash shellcode.sh [<options>] [<filename>]
+    
+        -e, --extract             Extract shellcode from binary and print
+        -s, --save                Save shellcode into a .txt file
+        -t, --test                Inject shellcode into shellcode.c file to test
+        -tb, --testbuild          Inject shellcode and build shellcode.c file
+        -tbr, --testbuildrun      Inject shellcode, buld and run shellcode.c file
+    
+    Example:
+      > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm
 
 ## ASM Fast Development Projects (X86)
 
