@@ -18,12 +18,13 @@ while true; do
             break
         ;;
         -t|--test)
-            local file=$currentFolder"/ShellcodeTest/shellcode.c"
-            local line_num="1"
-            local replacement='char code[] = "$shellcode"';
-            echo replacement
-            replacement_escaped=$( echo "$replacement" | sed -e 's/[\/&]/\\&/g' )
-            sed -i "${line_num}s/.*/$replacement_escaped/" "$file"
+            shellcodeTestFile=$currentFolder"/ShellcodeTest/shellcode.c"
+            shellcodeTestLine="1"
+            code='char code[] = "$shellcode"';
+            
+            replacement_escaped=$( echo "$cCode" | sed -e 's/[\/&]/\\&/g' )
+            sed -i "${shellcodeTestLine}s/.*/$replacement_escaped/" "$shellcodeTestFile"
+            break
         ;;
         *)
             break
