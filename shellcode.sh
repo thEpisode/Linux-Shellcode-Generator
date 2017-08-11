@@ -4,10 +4,12 @@ binaryFile=$1
 saveInFile=$2
 currentFolder=${PWD}
 
-# Get data from binary
-for i in $(objdump -d $binaryFile |grep "^ " |cut -f2);do
-    shellcode=$shellcode'\x'$i
-done
+function getShellcode {
+    # Get data from binary
+    for i in $(objdump -d $binaryFile |grep "^ " |cut -f2);do
+        shellcode=$shellcode'\x'$i
+    done
+}
 
 function saveShellcode {
     rm -f $binaryFile"_shellcode.txt"
@@ -66,24 +68,27 @@ while true; do
             break
         ;;
         # Save shellcode into a .txt file
-        -s|--save)            
+        -s|--save)
             saveShellcode
             printShellcode            
             break
         ;;
         # Save shellcode into shellcode.c file to test
-        -t|--test)            
+        -t|--test)
+            getShellcode      
             injectShellcode
             printShellcode
             break
         ;;
-        -tb|--testbuild)            
+        -tb|--testbuild)
+            getShellcode        
             injectShellcode
             buildShellcode
             printShellcode
             break
         ;;
-        -tbr|--testbuildrun)            
+        -tbr|--testbuildrun)
+            getShellcode       
             injectShellcode
             buildShellcode
             runShellcode
@@ -91,6 +96,7 @@ while true; do
             break
         ;;
         *)
+            getShellcode
             printShellcode
             break
         ;;
