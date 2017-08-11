@@ -19,7 +19,7 @@ function saveShellcode {
 
 function injectShellcode {
     shellcodeTestFile=$currentFolder"/ShellcodeTest/shellcode.c"
-    shellcodeTestLine="1"
+    shellcodeTestLine="4"
     shellcode_escaped=$( echo "$shellcode" | sed -e 's/[\/&]/\\&/g' )
     code="char code[] =\"$shellcode_escaped\";"
 
@@ -29,7 +29,7 @@ function injectShellcode {
 }
 
 function buildShellcode {
-    gcc -o $currentFolder"/ShellcodeTest/shellcode" $currentFolder"/ShellcodeTest/shellcode.c"
+    gcc -fno-stack-protector -z execstack $currentFolder"/ShellcodeTest/shellcode.c" -o -o $currentFolder"/ShellcodeTest/shellcode"
 
     echo "Shellcode test program was build succesfuly into "$currentFolder"/ShellcodeTest/shellcode"
 }

@@ -18,7 +18,13 @@ All source codes run on Linux, I will try to test in some many distros
 
 ### Compiling .c source codes
 
+Normal purposes
+
 > gcc -o cExecutableName sourceCode.c
+
+Testing shellcodes
+
+> gcc -fno-stack-protector -z execstack cExecutableName.c -o cExecutableName
 
 ## Binary to Shellcode string
 
