@@ -4,6 +4,12 @@ This is a series of experiments in C/ASM to execute shellcodes, I prefer Intel b
 
 All source codes run on Linux, I will try to test in some many distros
 
+## Bin to shellcode string
+
+Execute bash script in /Bin2Shellcode folder and pass the binary name
+
+> bash bin2shell.sh binaryName
+
 ## x86 support
 
 ### Compiling .asm source codes
