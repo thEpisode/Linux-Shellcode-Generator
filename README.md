@@ -48,7 +48,7 @@ I create a new strategy to fast development in asm, you could use it but you nee
 
 To create new project in ASM create a new folder named as you want and create a .asm file with same folder name. E.g.
 
-    |- ~/ASM/
+    | ~/ASM/
         |- MyProject/
             |- MyProject.asm
 
@@ -60,4 +60,10 @@ If you have an ASM Fast Development Project to compile only needs run following 
 
 > bash CompileASM.sh --folder MyProject
 
-It generates .o file and executable file into the folder
+It generates:
+
+    | ~/ASM/
+        |- MyProject/
+            |- MyProject.asm
+            |- MyProject.o
+            |- MyProject [Executable file]
