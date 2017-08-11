@@ -16,12 +16,17 @@ done
 echo 'Shellcode:'
 echo $shellcode
 
-while test $# -gt 0; do
-    case saveInFile in 
+while true; do
+    case "$saveInFile" in 
         -s|--save)
+            echo 'inside while and case'
             echo -n $shellcode >> shellcode.txt
+        ;;
+        *)
+            break
+        ;;
     esac
 done
 
 # Print in console
-echo -n $shellcode
+echo $shellcode
