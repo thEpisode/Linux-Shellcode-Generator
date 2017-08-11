@@ -21,6 +21,8 @@ while true; do
             shellcodeTestFile=$currentFolder"/ShellcodeTest/shellcode.c"
             shellcodeTestLine="1"
             code="char code[] = \"$shellcode\"";
+            echo "code:"
+            echo code
             
             replacement_escaped=$( echo "$cCode" | sed -e 's/[\/&]/\\&/g' )
             sed -i "${shellcodeTestLine}s/.*/$replacement_escaped/" "$shellcodeTestFile"
