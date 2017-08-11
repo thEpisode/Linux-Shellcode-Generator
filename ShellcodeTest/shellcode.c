@@ -2,7 +2,6 @@ char code[] ="\xb8\x04\x00\x00\x00\xbb\x01\x00\x00\x00\xb9\xa0\x90\x04\x08\xba\x
 
 int main(int argc, char *argv[])
 {
-    int (*func)();
-    func = (int (*) ()) code;
-    (int) (*func)();
+    int (*ret)() = (int(*)())code;
+    ret();
 }
