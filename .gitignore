@@ -1,7 +1,27 @@
-# Exclude ASM Binaries
+# Ignore all files
 *
+
+# Ignore all files in subdirectories
+#**/**
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all files in subdirectories
 /*
-*/*
+!/*.asm
+!/*.c
+!/*.sh
+!/*.md
+!/*.txt
+!/*/
+/*/**
+
+!/**/*.asm
+!/**/*.c
+!/**/*.sh
+!/**/*.md
+!/**/*.txt
 
 # Except source code files
 !.gitignore
@@ -11,25 +31,3 @@
 !*.sh
 !*.md
 !*.txt
-
-# Except source codes in subdirectories
-!*/*.c
-!/*/*.c
-!/**/*.c
-!**/*.c
-!*/*.asm
-!/*/*.asm
-!/**/*.asm
-!**/*.asm
-!*/*.sh
-!/*/*.sh
-!/**/*.sh
-!**/*.sh
-!*/*.md
-!/*/*.md
-!/**/*.md
-!**/*.md
-!*/*.txt
-!/*/*.txt
-!/**/*.txt
-!**/*.txt
