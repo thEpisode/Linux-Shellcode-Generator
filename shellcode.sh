@@ -52,6 +52,7 @@ function printHelp {
     echo
     echo 'Usage: bash shellcode.sh [<options>] [<filename>]'
     echo
+    echo '    -e, --extract             Extract shellcode from binary and print'
     echo '    -s, --save                Save shellcode into a .txt file'
     echo '    -t, --test                Inject shellcode into shellcode.c file to test'
     echo '    -tb, --testbuild          Inject shellcode and build shellcode.c file'
@@ -59,6 +60,7 @@ function printHelp {
     echo
     echo 'Example:'
     echo '  > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm'
+    echo
 }
 
 while true; do
@@ -67,15 +69,21 @@ while true; do
             printHelp
             break
         ;;
+        -e|--extract)
+            getShellcode
+            printShellcode
+            break
+        ;;
         # Save shellcode into a .txt file
         -s|--save)
+            getShellcode
             saveShellcode
             printShellcode            
             break
         ;;
         # Save shellcode into shellcode.c file to test
         -t|--test)
-            getShellcode      
+            getShellcode
             injectShellcode
             printShellcode
             break
