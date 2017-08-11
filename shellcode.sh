@@ -10,7 +10,7 @@ for i in $(objdump -d $binaryFile |grep "^ " |cut -f2);do
 done
 
 function saveShellcode {
-    rm -f shellcode.txt
+    rm -f $binaryFile"_shellcode.txt"
     echo $shellcode >> $binaryFile"_shellcode.txt"
     echo "Shellcode save into "$binaryFile"_shellcode.txt"
 }
