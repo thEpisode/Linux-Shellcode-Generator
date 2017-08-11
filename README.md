@@ -40,6 +40,36 @@ or
 
 > bash shellcode.sh ~/ASM/FolderName/binaryName -s
 
+### Testing in C program
+
+If you want to run in a C program but not want to compile, using next flag you can replace in ShellcodeTest/shellcode.c the payload
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName --test
+
+or 
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName -t
+
+### Testing and compiling in C program
+
+Similar to last option but this compile the program
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName --testbuild
+
+or 
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName -tb
+
+### Testing, compiling and run in C program
+
+Similar to last option but this execute the program
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName --testbuildrun
+
+or 
+
+> bash shellcode.sh ~/ASM/FolderName/binaryName -tbr
+
 ## ASM Fast Development Projects (X86)
 
 I create a new strategy to fast development in asm, you could use it but you need to follow next instructions:
