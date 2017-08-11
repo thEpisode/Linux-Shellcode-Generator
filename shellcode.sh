@@ -1,7 +1,7 @@
 #!/bin/bash
 
-binaryFile=$1
-saveInFile=$2
+flag=$1
+binaryFile=$2
 currentFolder=${PWD}
 
 function getShellcode {
@@ -50,7 +50,7 @@ function printShellcode {
 
 function printHelp {
     echo
-    echo 'Usage: bash shellcode.sh [<filename>] [<options>]'
+    echo 'Usage: bash shellcode.sh [<options>] [<filename>]'
     echo
     echo '    -s, --save                Save shellcode into a .txt file'
     echo '    -t, --test                Inject shellcode into shellcode.c file to test'
@@ -58,11 +58,11 @@ function printHelp {
     echo '    -tbr, --testbuildrun      Inject shellcode, buld and run shellcode.c file'
     echo
     echo 'Example:'
-    echo '  > bash shellcode.sh ~/ASM/HelloWorld/Helloworld.asm -tbr'
+    echo '  > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm'
 }
 
 while true; do
-    case "$saveInFile" in 
+    case "$flag" in 
         -h|--help)
             printHelp
             break
