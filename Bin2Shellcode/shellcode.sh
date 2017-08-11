@@ -1,7 +1,7 @@
 #!/bin/bash
 
-binaryFile = $1
-saveInFile = $2
+binaryFile=$1
+saveInFile=$2
 
 
 # Get data from binary
