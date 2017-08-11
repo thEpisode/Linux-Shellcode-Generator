@@ -6,3 +6,10 @@
 !*.gitignore
 !*.md
 !*.txt
+
+!**/*.c
+!**/*.asm
+!**/*.sh
+!**/*.gitignore
+!**/*.md
+!**/*.txt
