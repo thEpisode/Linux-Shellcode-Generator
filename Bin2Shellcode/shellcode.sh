@@ -5,7 +5,7 @@ saveInFile=$2
 
 
 # Get data from binary
-for i in $(objdump -d binaryFile |grep "^ " |cut -f2);do
+for i in $(objdump -d $binaryFile |grep "^ " |cut -f2);do
     shellcode=$shellcode'\x'$i
 done
 
