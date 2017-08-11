@@ -19,5 +19,6 @@ while true; do
     esac
 done
 
-echo 'Compilation done'
+echo 'Compilation done with 0 errors'
+echo 'Check $projectFolder folder'
 echo
