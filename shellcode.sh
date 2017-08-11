@@ -103,8 +103,7 @@ while true; do
             break
         ;;
         *)
-            getShellcode
-            printShellcode
+            printHelp
             break
         ;;
     esac
