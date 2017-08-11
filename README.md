@@ -22,9 +22,13 @@ All source codes run on Linux, I will try to test in some many distros
 
 ## Binary to Shellcode string
 
-### Show in console
+To fast development in shellcodes use next following script to generate shellcode string
 
-Execute bash script in /Bin2Shellcode folder and pass the binary name
+### Usage
+
+> bash shellcode.sh [filename] [-s --save | optional]
+
+### Show in console
 
 > bash shellcode.sh ~/ASM/FolderName/binaryName
 
