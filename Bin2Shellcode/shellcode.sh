@@ -21,6 +21,7 @@ while true; do
         -s|--save)
             echo 'inside while and case'
             echo -n $shellcode >> shellcode.txt
+            break
         ;;
         *)
             break
