@@ -66,6 +66,12 @@ For fast development in asm, you could use next script and specification:
 
 This command create a new .asm file inside folder, open and develop!
 
+It generates:
+
+    | ~/ASM/
+        |- HelloWorld/
+            |- HelloWorld.asm
+
 **Disclaimer**: Do not change the .asm file name!. If you need change it, **you need to change folder name**
 
 ### Compiling ASM Fast Development Projects
