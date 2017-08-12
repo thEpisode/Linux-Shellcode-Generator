@@ -25,6 +25,6 @@ _start:
     int 0x80   ; interrumpt system (execute)
 
     xor eax, eax
-    mov al, 1   sys_exit
+    mov al, 1  ; sys_exit
     xor ebx,ebx
     int 0x80

@@ -44,7 +44,7 @@ function printHelp {
 
 function printFinish {    
     echo 'Compilation done with 0 errors'
-    echo 'Check $projectFolder folder'
+    echo 'Check '$projectFolder' folder'
     echo
 }
 
