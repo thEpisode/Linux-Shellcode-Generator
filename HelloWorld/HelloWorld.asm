@@ -20,7 +20,7 @@ _start:
 
     mov al, 4  ; ssize_t sys_write(unsigned int fd, const char * buf, size_t count) (write in console)
     mov bl, 1  ; sys_write argv #1 (unsigned int)
-    mov cl, msg; sys_write argv #2 (char *)
+    mov ecx, msg; sys_write argv #2 (char *)
     mov dl, len; sys_write argv #3 (size_t)
     int 0x80   ; interrumpt system (execute)
 
