@@ -53,9 +53,9 @@ function printHelp {
     echo
     echo '    -e, --extract             Extract shellcode from binary and print'
     echo '    -s, --save                Save shellcode into a .txt file'
-    echo '    -t, --test                Inject shellcode into shellcode.c file to test'
-    echo '    -tb, --testbuild          Inject shellcode and build shellcode.c file'
-    echo '    -tbr, --testbuildrun      Inject shellcode, buld and run shellcode.c file'
+    echo '    -t, --test                Inject shellcode into shellcode.c source code, ready to compile'
+    echo '    -tb, --testbuild          Inject shellcode and build C program'
+    echo '    -tbr, --testbuildrun      Inject shellcode, build and run C program'
     echo
     echo 'Example:'
     echo '  > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm'
@@ -76,22 +76,19 @@ while true; do
         # Save shellcode into a .txt file
         -s|--save)
             getShellcode
-            saveShellcode
-            printShellcode            
+            saveShellcode         
             break
         ;;
         # Save shellcode into shellcode.c file to test
         -t|--test)
             getShellcode
             injectShellcode
-            printShellcode
             break
         ;;
         -tb|--testbuild)
             getShellcode        
             injectShellcode
             buildShellcode
-            printShellcode
             break
         ;;
         -tbr|--testbuildrun)
@@ -99,7 +96,6 @@ while true; do
             injectShellcode
             buildShellcode
             runShellcode
-            printShellcode
             break
         ;;
         *)

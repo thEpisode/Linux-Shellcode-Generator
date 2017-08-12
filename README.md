@@ -28,7 +28,7 @@ Testing shellcodes
 
 ## Binary to Shellcode string
 
-To fast development in shellcodes use next following script to generate shellcode string and test
+To easy extracting shellcodes use following script to generate shellcode strings and tests
 
 ### Usage
 
@@ -36,16 +36,16 @@ To fast development in shellcodes use next following script to generate shellcod
     
         -e, --extract             Extract shellcode from binary and print
         -s, --save                Save shellcode into a .txt file
-        -t, --test                Inject shellcode into shellcode.c file to test
-        -tb, --testbuild          Inject shellcode and build shellcode.c file
-        -tbr, --testbuildrun      Inject shellcode, buld and run shellcode.c file
+        -t, --test                Inject shellcode into shellcode.c source code, ready to compile
+        -tb, --testbuild          Inject shellcode and build C program
+        -tbr, --testbuildrun      Inject shellcode, build and run C program
     
     Example:
       > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm
 
 ## ASM Fast Development Projects (X86)
 
-For fast development in asm, you could use next script and specification:
+For fast development in asm, you could use following tool:
 
 ### Usage
 
@@ -54,7 +54,7 @@ For fast development in asm, you could use next script and specification:
         -h, --help                Show helps'
         -n, --new                 Create new project with folder name given
         -c, --compile             Compile .asm file inside folder
-            Disclaimer: This script works in current folder, do not try to compile outside this folder
+                                  Disclaimer: This script works in current folder, do not try to compile outside this folder
     
     Example:
       > bash ASMFastDevelopment.sh -c HelloWorld
@@ -62,7 +62,7 @@ For fast development in asm, you could use next script and specification:
 
 ### Creating new ASM Fast Development Projects
 
-> bash ASMFastDevelopment.sh -n HelloWorld
+> bash ASMFastDevelopment.sh --new HelloWorld
 
 This command create a new .asm file inside folder, open and develop!
 
@@ -76,7 +76,7 @@ It generates:
 
 ### Compiling ASM Fast Development Projects
 
-> bash ASMFastDevelopment.sh -c HelloWorld
+> bash ASMFastDevelopment.sh --compile HelloWorld
 
 It generates:
 
