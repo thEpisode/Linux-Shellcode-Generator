@@ -85,3 +85,7 @@ It generates:
             |- HelloWorld.asm
             |- HelloWorld.o
             |- HelloWorld [Executable file]
+
+## Remember
+
+![Registers](http://i.imgur.com/ZPYfZty.png)
