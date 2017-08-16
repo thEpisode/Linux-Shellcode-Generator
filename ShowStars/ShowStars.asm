@@ -4,7 +4,7 @@
 section .data
     msg db 'Displaying 9 stars',0xa ;a message
     len equ $ - msg  ;length of message
-    s2 times 9 db '*'
+    s2 times 9 db '*',0xa
 
 section .text
     global _start
