@@ -17,6 +17,12 @@ _start:
     mov	eax,4       ;system call number (sys_write)
     int	0x80        ;call kernel
 
+    mov edx, brklen;show a breakline
+    mov ecx, brkln
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+
     mov	[name],  dword 'Nuha'    ; Changed the name to Nuha Ali
 
     ;writing the name 'Nuha Ali'
