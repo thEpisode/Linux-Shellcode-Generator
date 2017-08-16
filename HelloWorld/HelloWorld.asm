@@ -1,4 +1,4 @@
-; hello.asm
+; HelloWorld.asm
 ; x86 architecture
 ; Intel specification
 

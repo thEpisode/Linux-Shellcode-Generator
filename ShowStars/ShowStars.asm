@@ -1,4 +1,4 @@
-; hello.asm
+; ShowStars.asm
 ; x86 architecture
 ; Intel specification
 section .data

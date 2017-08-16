@@ -1,4 +1,4 @@
-; hello.asm
+; InputNumber.asm
 ; x86 architecture
 ; Intel specification
 section .data
