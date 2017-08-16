@@ -2,7 +2,7 @@
 ; x86 architecture
 ; Intel specification
 section .data
-    name db 'Zara Ali '
+    name db 'Zara Ali ',0xA,0xD
     brkln db '', 0xa ; breakline
     brklen equ $ - brkln
 
