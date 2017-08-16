@@ -6,7 +6,7 @@ currentFolder=${PWD}
 
 function newProject {
     mkdir "$currentFolder/$projectFolder/"
-    echo "; hello.asm" >> "$currentFolder/$projectFolder/$projectFolder.asm"
+    echo "; $projectFolder.asm" >> "$currentFolder/$projectFolder/$projectFolder.asm"
     echo "; x86 architecture" >> "$currentFolder/$projectFolder/$projectFolder.asm"
     echo "; Intel specification" >> "$currentFolder/$projectFolder/$projectFolder.asm"
     echo "section .data" >> "$currentFolder/$projectFolder/$projectFolder.asm"
