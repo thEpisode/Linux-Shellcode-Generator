@@ -24,7 +24,7 @@ _start:
     mov	eax,4    ;system call number (sys_write)
     int	0x80     ;call kernel
 
-    mov edx, brklen
+    mov edx, brklen;show a breakline
     mov ecx, brkln
     mov ebx, 1
     mov eax, 4
