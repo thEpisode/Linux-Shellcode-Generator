@@ -6,6 +6,8 @@ All source codes run on Linux, I will try to test in some many distros
 
 ## x86 support
 
+**Disclaimer:** This section is under x86 support, all code above is **only** for x86 architectures. In next versions support x64 and x84_64.
+
 ### Compiling .asm source codes
 
 > nasm -f elf sourceCode.asm
@@ -32,7 +34,7 @@ To easy extracting shellcodes use following script to generate shellcode strings
 
 ### Usage
 
-    Usage: bash shellcode.sh [<options>] [<filename>]
+    Usage: bash shellcode.sh [<options>] [<asm_filename>]
     
         -e, --extract             Extract shellcode from binary and print
         -s, --save                Save shellcode into a .txt file
@@ -43,7 +45,7 @@ To easy extracting shellcodes use following script to generate shellcode strings
     Example:
       > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm
 
-## ASM Fast Development Projects (X86)
+## ASM Fast Development Projects (x86)
 
 For fast development in asm, you could use following tool:
 
@@ -60,7 +62,7 @@ For fast development in asm, you could use following tool:
       > bash ASMFastDevelopment.sh -c HelloWorld
     
 
-### Creating new ASM Fast Development Projects
+### Creating new ASM Fast Development Projects (x86)
 
 > bash ASMFastDevelopment.sh --new HelloWorld
 
