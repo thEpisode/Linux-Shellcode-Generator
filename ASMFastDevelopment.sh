@@ -6,23 +6,23 @@ currentFolder=${PWD}
 
 function newProject {
     mkdir "$currentFolder/$projectFolder/"
-    echo "; $projectFolder.asm" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "; x86 architecture" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "; Intel specification" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "section .data" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "  " >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "section .text" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "    global _start" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "_start:" >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "  " >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "  " >> "$currentFolder/$projectFolder/$projectFolder.asm"
-    echo "  " >> "$currentFolder/$projectFolder/$projectFolder.asm"
+    echo "; $projectFolder.asm" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "; x86 architecture" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "; Intel specification" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "section .data" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "  " >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "section .text" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "    global _start" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "_start:" >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "  " >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "  " >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
+    echo "  " >> "$currentFolder/src/projects/$projectFolder/$projectFolder.asm"
 }
 
 function compile {
-    cd "$currentFolder/$projectFolder/"
+    cd "$currentFolder/src/projects/$projectFolder/"
     nasm -f elf32 $projectFolder'.asm' -o $projectFolder'.o'
     ld -m elf_i386 $projectFolder'.o' -o $projectFolder
     cd $currentFolder
