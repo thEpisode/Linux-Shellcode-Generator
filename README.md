@@ -92,8 +92,8 @@ It generates:
     | ~/ASM/
 		|- src/
 			|- projects/
-        		|- HelloWorld/
-            		|- HelloWorld.asm
+				|- HelloWorld/
+					|- HelloWorld.asm
 
 **Warning**: Do not change the .asm file name!. If you need change it, **you need to change folder name**
 
