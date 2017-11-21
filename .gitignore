@@ -2,26 +2,26 @@
 *
 
 # Ignore all files in subdirectories
-#**/**
+#/src/projects/**
 
 # Unignore all with extensions
 !*.*
 
 # Unignore all files in subdirectories
 /*
-!/*.asm
-!/*.c
-!/*.sh
-!/*.md
-!/*.txt
-!/*/
+!/src/projects/*.asm
+!/src/projects/*.c
+!/src/projects/*.sh
+!/src/projects/*.md
+!/src/projects/*.txt
+!/src/projects/*/
 /*/**
 
-!/**/*.asm
-!/**/*.c
-!/**/*.sh
-!/**/*.md
-!/**/*.txt
+!/src/projects/**/*.asm
+!/src/projects/**/*.c
+!/src/projects/**/*.sh
+!/src/projects/**/*.md
+!/src/projects/**/*.txt
 
 # Except source code files
 !.gitignore
