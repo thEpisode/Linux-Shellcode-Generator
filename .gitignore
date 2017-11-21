@@ -1,21 +1,21 @@
 # Ignore all files
-*
+/src/projects/**
 
 # Ignore all files in subdirectories
 #/src/projects/**
 
 # Unignore all with extensions
-!*.*
+!/src/projects/*.*
 
 # Unignore all files in subdirectories
-/*
+/src/projects/*
 !/src/projects/*.asm
 !/src/projects/*.c
 !/src/projects/*.sh
 !/src/projects/*.md
 !/src/projects/*.txt
 !/src/projects/*/
-/*/**
+/src/projects/*/**
 
 !/src/projects/**/*.asm
 !/src/projects/**/*.c
