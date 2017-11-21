@@ -89,7 +89,7 @@ This command create a new .asm file inside folder, open and develop!
 
 It generates:
 
-    | ~/ASM/
+    | ~/Linux-Shellcode-Generator/
 		|- src/
 			|- projects/
 				|- HelloWorld/
