@@ -5,6 +5,7 @@ This is a shellcode generator in ASM to fast development and test it in a C snip
 All source codes run on Debian, I will try to test in some many Linux distros.
 
 ## Table of contents
+- [Where to start](#where-to-start)
 - [Manual compilation and test](#manual-compilation-and-test)
     * [x86 support](#x86-support)
 		* [Compiling .asm source codes](#compiling-.asm-source-codes)
@@ -16,6 +17,16 @@ All source codes run on Debian, I will try to test in some many Linux distros.
 	* [ASM Fast Development Usage](#asm-fast-development-usage)
 	* [Creating new ASM Fast Development Projects](#creating-new-asm-fast-development-projects)
 	* [Compiling ASM Fast Development Projects](#compiling-asm-fast-development-projects)
+
+## Where to start
+
+Some useful links:
+- A complete beginner guide: http://www.vividmachines.com/shellcode/shellcode.html
+- Understanting a basic Hello World!: https://stackoverflow.com/questions/15593214/linux-shellcode-hello-world
+- How Shellcodes Work: http://www.linuxdevcenter.com/pub/a/linux/2006/05/18/how-shellcodes-work.html
+- Shellcode injection: https://dhavalkapil.com/blogs/Shellcode-Injection/
+- Some of C++: http://files2.syncfusion.com/Downloads/Ebooks/Cplusplus_Succinctly.pdf
+- Also you can read this book: https://leaksource.files.wordpress.com/2014/08/hacking-the-art-of-exploitation.pdf
 
 ## Manual compilation and test
 
