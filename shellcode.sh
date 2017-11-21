@@ -51,11 +51,11 @@ function printHelp {
     echo
     echo 'Usage: bash shellcode.sh [<options>] [<filename>]'
     echo
-    echo '    -e, --extract             Extract shellcode from binary and print'
-    echo '    -s, --save                Save shellcode into a .txt file'
-    echo '    -t, --test                Inject shellcode into shellcode.c source code, ready to compile'
-    echo '    -tb, --testbuild          Inject shellcode and build C program'
-    echo '    -tbr, --testbuildrun      Inject shellcode, build and run C program'
+    echo '    -e, --extract             Extract shellcode from binary file and print in console'
+    echo '    -s, --save                Save shellcode string into a .txt file'
+    echo '    -t, --test                Inject shellcode string into shellcode.c source code, ready to compile'
+    echo '    -tb, --testbuild          Inject shellcode string and build shellcode.c'
+    echo '    -tbr, --testbuildrun      Inject shellcode string, build shellcode.c and run program'
     echo
     echo 'Example:'
     echo '  > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm'

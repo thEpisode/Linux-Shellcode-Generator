@@ -53,11 +53,11 @@ To easy extracting shellcodes use shellcode.sh script contained in root project 
 
     > bash shellcode.sh [<options>] [<asm_filename>]
     
-        -e, --extract             Extract shellcode from binary and print
-        -s, --save                Save shellcode into a .txt file
-        -t, --test                Inject shellcode into shellcode.c source code, ready to compile
-        -tb, --testbuild          Inject shellcode and build C program
-        -tbr, --testbuildrun      Inject shellcode, build and run C program
+        -e, --extract             Extract shellcode from binary file and print in console
+        -s, --save                Save shellcode string into a .txt file
+        -t, --test                Inject shellcode string into shellcode.c source code, ready to compile
+        -tb, --testbuild          Inject shellcode string and build shellcode.c
+        -tbr, --testbuildrun      Inject shellcode string, build shellcode.c and run program
     
     Example:
       > bash shellcode.sh -tbr ~/ASM/HelloWorld/Helloworld.asm
