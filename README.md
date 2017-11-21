@@ -109,4 +109,4 @@ It generates:
 
 ## Small help
 
-<img src="http://i.imgur.com/ZPYfZty.png" alt="Registers" width="45%">
+<img src="http://i.imgur.com/ZPYfZty.png" alt="Registers" width="50%" style="display: block; margin: 0 auto;">
