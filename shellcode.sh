@@ -18,24 +18,24 @@ function saveShellcode {
 }
 
 function injectShellcode {
-    shellcodeTestFile=$currentFolder"/ShellcodeTest/shellcode.c"
+    shellcodeTestFile=$currentFolder"/Shellcode-Injectable-Projectshellcode.c"
     shellcodeTestLine="4"
     shellcode_escaped=$( echo "$shellcode" | sed -e 's/[\/&]/\\&/g' )
     code="char code[] =\"$shellcode_escaped\";"
 
     sed -i "${shellcodeTestLine}s/.*/$code/" "$shellcodeTestFile"
 
-    echo "Shellcode injected into "$currentFolder"/ShellcodeTest/shellcode.c"
+    echo "Shellcode injected into "$currentFolder"/Shellcode-Injectable-Projectshellcode.c"
 }
 
 function buildShellcode {
-    gcc $currentFolder"/ShellcodeTest/shellcode.c" -o $currentFolder"/ShellcodeTest/shellcode" -fno-stack-protector -z execstack -no-pie
-    echo "Shellcode test program was build succesfuly into "$currentFolder"/ShellcodeTest/shellcode"
+    gcc $currentFolder"/Shellcode-Injectable-Projectshellcode.c" -o $currentFolder"/Shellcode-Injectable-Projectshellcode" -fno-stack-protector -z execstack -no-pie
+    echo "Shellcode test program was build succesfuly into "$currentFolder"/Shellcode-Injectable-Projectshellcode"
 }
 
 function runShellcode {
-    echo "Executing shellcode "$currentFolder"/ShellcodeTest/shellcode"
-    ./ShellcodeTest/shellcode
+    echo "Executing shellcode "$currentFolder"/Shellcode-Injectable-Projectshellcode"
+    ./Shellcode-Injectable-Projectshellcode
 }
 
 # Print in console
