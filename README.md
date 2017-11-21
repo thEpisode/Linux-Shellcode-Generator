@@ -85,9 +85,9 @@ I know that start a new project and contain all generated files is hard, for tha
 
 > bash ASMFastDevelopment.sh --new HelloWorld
 
-This command create a new .asm file inside folder, open and develop!
+The previous command create a new .asm file inside a folder with name provided, open it and develop!
 
-It generates:
+Folder tree generated:
 
     | ~/Linux-Shellcode-Generator/
 		|- src/
@@ -101,13 +101,15 @@ It generates:
 
 > bash ASMFastDevelopment.sh --compile HelloWorld
 
-It generates:
+The previous command generate:
 
-    | ~/ASM/
-        |- HelloWorld/
-            |- HelloWorld.asm
-            |- HelloWorld.o
-            |- HelloWorld [Executable file]
+    | ~/Linux-Shellcode-Generator/
+		|- src/
+			|- projects/
+				|- HelloWorld/
+					|- HelloWorld.asm
+					|- HelloWorld.o
+					|- HelloWorld [your executable file]
 
 ## Small help
 
