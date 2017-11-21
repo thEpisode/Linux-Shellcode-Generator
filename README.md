@@ -90,8 +90,10 @@ This command create a new .asm file inside folder, open and develop!
 It generates:
 
     | ~/ASM/
-        |- HelloWorld/
-            |- HelloWorld.asm
+		|- src/
+			|- projects/
+        		|- HelloWorld/
+            		|- HelloWorld.asm
 
 **Warning**: Do not change the .asm file name!. If you need change it, **you need to change folder name**
 
