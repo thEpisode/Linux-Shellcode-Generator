@@ -2,7 +2,7 @@
 
 This is a shellcode generator in ASM to fast development and test it in a C snippet template, I prefer Intel syntax but if you found any AT&T syntax in experiments code don't worry, only read documentation inside source code.
 
-All source codes run on Debian, I will try to test in some many Linux distros.
+All source codes run on Parrot OS (Debian), I will try to test in some many Linux distros.
 
 ## Table of contents
 - [Where to start](#where-to-start)
