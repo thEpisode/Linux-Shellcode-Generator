@@ -109,4 +109,4 @@ It generates:
 
 ## Small help
 
-<div style="width:25%">![Registers](http://i.imgur.com/ZPYfZty.png)</div>
+<img src="http://i.imgur.com/ZPYfZty.png" alt="Registers" width="25%">
